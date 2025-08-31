@@ -18,5 +18,23 @@ const Postagem = sequelize.define('postagens', {
     }
 });
 
-Postagem.sync({force:true});
+//Postagem.sync({force:true});
 
+//Criando a tabela usuário
+const Usuario = sequelize.define('usuario', {
+    nome: {
+        type: Sequelize.STRING
+    },
+    sobrenome: {
+        type: Sequelize.STRING
+    },
+    idade: {
+        type: Sequelize.INTEGER
+    },
+    email: {
+        type: Sequelize.STRING
+    }
+});
+Usuario.sync({force:true});
+
+//Fazendo inserções no banco de dados
