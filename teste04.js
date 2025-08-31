@@ -18,7 +18,7 @@ const Postagem = sequelize.define('postagens', {
     }
 });
 
-//Postagem.sync({force:true});
+//Postagem.sync({force:true}); comentando esse comando para não criar outra tabela
 
 //Criando a tabela usuário
 const Usuario = sequelize.define('usuario', {
@@ -35,6 +35,12 @@ const Usuario = sequelize.define('usuario', {
         type: Sequelize.STRING
     }
 });
-Usuario.sync({force:true});
+//Usuario.sync({force:true}); comentando esse comando para não criar outra tabela
 
 //Fazendo inserções no banco de dados
+Usuario.create({
+    nome: "Mario",
+    sobrenome: "Jesus",
+    idade: 33,
+    email: "analista.mario@gmail.com"
+})
